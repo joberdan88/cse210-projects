@@ -28,10 +28,10 @@ public class Journal
         {
             foreach (Entry entry in _entries)
             {
-                writer.WriteLine($"{entry._date}~|~{entry._prompt}~|~{entry._response}");
+                writer.WriteLine($"{entry._date}~|~{entry._prompt}~|~{entry._response}~|~{entry._category}");
             }
         }
-        Console.WriteLine("Journal saved successfully!");
+        Console.WriteLine($"Journal saved successfully! File location: {Path.GetFullPath(filename)}");
     }
 
     public void LoadFromFile(string filename)
@@ -68,9 +68,12 @@ public class Journal
 
     public void SaveToJSON(string filename)
     {
+        string directoryPath = AppDomain.CurrentDomain.BaseDirectory;
+        string fullPath = Path.Combine(directoryPath, filename + ".json");
         string json = JsonSerializer.Serialize(_entries, new JsonSerializerOptions { WriteIndented = true });
-        File.WriteAllText(filename, json);
-        Console.WriteLine("Journal saved as JSON successfully!");
+        File.WriteAllText(fullPath, json);
+        
+        Console.WriteLine("Journal saved as JSON successfully! File location: {fullPath}");
     }
 
     public void LoadFromJSON(string filename)
