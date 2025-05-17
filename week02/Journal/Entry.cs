@@ -1,10 +1,19 @@
 public class Entry
 {
-    public string _text;
-    public DateTime _date;
+    public string _date;
+    public string _prompt;
+    public string _response;
+
+    public Entry(string date, string prompt, string response)
+    {
+        _date = date;
+        _prompt = prompt;
+        _response = response;
+    }
 
     public void Display()
     {
-        Console.WriteLine($"{_date.ToShortDateString()} - {_text}");
+        Console.WriteLine($"{_date} - {_prompt}");
+        Console.WriteLine($"Response: {_response}");
     }
 }
