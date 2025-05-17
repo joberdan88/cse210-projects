@@ -35,7 +35,9 @@ class Program
                     Console.WriteLine($"\nPrompt: {prompt}");
                     Console.WriteLine("Your response: ");
                     string response = Console.ReadLine();
-                    myJournal.AddEntry(new Entry(DateTime.Now.ToShortDateString(), prompt, response));
+                    Console.WriteLine("Choose a category: Personal, Work, Ideas, Gratitude, Other");
+                    string category = Console.ReadLine();                    
+                    myJournal.AddEntry(new Entry(DateTime.Now.ToShortDateString(), prompt, response, category));
                     break;
 
                 case "2":
