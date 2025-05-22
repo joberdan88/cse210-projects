@@ -23,7 +23,7 @@ public class Scripture
             visibleWords.RemoveAt(index);
         }
     }
-    public bool AllWorldsHidden()
+    public bool AllWordsHidden()
     {
         return Words.All(word => word.IsHidden);
     }

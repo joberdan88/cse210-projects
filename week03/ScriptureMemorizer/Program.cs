@@ -7,7 +7,7 @@ class Program
     static void Main()
     {
         ScriptureReference reference = new ScriptureReference("Proverbs", 3, 5, 6);
-        Scripture scripture = new Scripture(reference, "Trust in the LORD with all your heart and lean not on your own uderstanding");
+        Scripture scripture = new Scripture(reference, "Trust in the LORD with all your heart and lean not on your own understanding");
 
         while (true)
         {
