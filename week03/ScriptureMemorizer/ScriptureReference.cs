@@ -17,6 +17,6 @@ public class ScriptureReference
 
     public override string ToString()
     {
-        return EndVerse == null ? $"{Book} {Chapter}:{StartVerse}" : "{Book} {Chapter}: {StartVerse}-{EndVerse}";
+        return EndVerse == null ? $"{Book} {Chapter}:{StartVerse}" : $"{Book} {Chapter}: {StartVerse}-{EndVerse}";
     }
 }
