@@ -13,7 +13,7 @@ public class BreathingActivity : Activity
             Console.WriteLine("\nBreathe in...");
             ShowCountDown(3);
             Console.WriteLine("\nBreathe out...");
-            ShowCountDonw(3);
+            ShowCountDown(3);
             elapsedTime += 6;
         }
 

@@ -18,7 +18,7 @@ public class ListingActivity : Activity
         DisplayStartingMessage();
 
         Console.WriteLine($"\n{_prompts[new Random().Next(_prompts.Count)]}");
-        ShowSnipper(3);
+        ShowSpinner(3);
 
         List<string> responses = new List<string>();
         int elapsedTime = 0;
